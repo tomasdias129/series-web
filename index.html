@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Séries que estou a ver</title>
+<meta name="theme-color" content="#14141c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Séries">
+<link rel="apple-touch-icon" href="icones/180.png">
+<link rel="icon" href="icones/192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- Entrar -->
+<section id="entrar" class="ecra" hidden>
+  <div class="entrar-caixa">
+    <img src="icones/192.png" alt="" class="logo">
+    <h1>Séries que estou a ver</h1>
+    <p class="suave">Entra com a mesma conta do PC.</p>
+    <form id="fEntrar">
+      <input id="email" type="email" placeholder="Email" autocomplete="username" required>
+      <input id="pass" type="password" placeholder="Palavra-passe" autocomplete="current-password" required>
+      <button class="prim" type="submit">Entrar</button>
+      <p id="erroEntrar" class="erro"></p>
+    </form>
+  </div>
+</section>
+
+<!-- A app -->
+<section id="app" class="ecra" hidden>
+  <header class="topo">
+    <h1>Séries</h1>
+    <div class="bts-topo">
+      <button class="ib" id="bCal" aria-label="Calendário">📅</button>
+      <button class="ib" id="bNova" aria-label="Nova série">＋</button>
+      <button class="ib" id="bMenu" aria-label="Mais">⋯</button>
+    </div>
+  </header>
+  <div class="pesquisa"><input id="q" type="search" placeholder="Pesquisar série…" autocomplete="off"></div>
+  <nav id="abas" class="abas"></nav>
+  <div id="destaque" class="destaque"></div>
+  <div id="aSeguir"></div>
+  <div id="grelha" class="grelha"></div>
+  <p id="vazio" class="suave centro" hidden></p>
+</section>
+
+<!-- Folha (detalhes, formulário, calendário, menu) -->
+<div id="fundoFolha" class="fundo-folha" hidden></div>
+<div id="folha" class="folha" hidden></div>
+<div id="aviso" class="aviso"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
